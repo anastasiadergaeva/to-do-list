@@ -4,27 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto&family=Roboto+Slab:wght@300&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="assets/index.css">
     <title>to do list</title>
 </head>
 
 <body>
-    <main>
-        <h1>to do list</h1>
-        <form action="#">
-            <input type="text" name="task">
-            <input type="button" value="add task">
+    <main class="main">
+        <h1 class="main__heading">to do list</h1>
+        <form class="main__form" action="#">
+            <input class="taskinput" type="text" name="task">
+            <input class="button" type="button" value="add task">
         </form>
         <div class="tasklist">
-            <h2>task list</h2>
+            <h2 class="tasklist__heading">task list</h2>
             <div>
                 <ul></ul>
             </div>
             <p class="notasks">no tasks yet</p>
             <p class="addedtasks"></p>
-            <button class="clearbutton">clear task list</button>
         </div>
     </main>
+
+    <script src="assets/index.js"></script>
 </body>
 
 </html>

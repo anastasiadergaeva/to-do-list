@@ -1,0 +1,52 @@
+body {
+    background-color: rgb(250, 250, 178);
+}
+
+.main {
+    width: 50%;
+    max-width: 1200px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto;
+}
+
+.main__heading,
+.tasklist__heading,
+.notasks {
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+}
+
+.main__form {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+
+.tasklist {
+    border: 2px solid saddlebrown;
+    border-radius: 20px;
+    margin-top: 2em;
+}
+
+.task-item,
+.checked {
+    color: #e5a06c;
+    text-decoration: line-through;
+}
+
+.taskinput {
+    border-radius: 15px;
+    border: 2px solid saddlebrown;
+}
+
+.button {
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    letter-spacing: .1rem;
+    background-color: rgba(210, 210, 149, 0.578);
+    border: 1px solid saddlebrown;
+    border-radius: 15px;
+    padding: 0.5rem;
+    cursor: pointer;
+}
