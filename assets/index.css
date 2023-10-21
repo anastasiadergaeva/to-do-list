@@ -23,7 +23,7 @@ body {
     gap: 2em;
 }
 
-.tasklist {
+.mainlist {
     border: 2px solid saddlebrown;
     border-radius: 20px;
     margin-top: 2em;
