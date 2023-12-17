@@ -16,15 +16,18 @@
 <body>
     <main class="main">
         <h1 class="main__heading">to do list</h1>
-        <form class="main__form" action="#">
+        <form class="main__form">
             <input class="taskinput" type="text" name="task">
-            <input class="button" type="button" value="add task">
+            <input class="button add-button" type="button" value="add task">
         </form>
         <div class="mainlist">
             <h2 class="tasklist__heading">task list</h2>
             <ul class="tasklist"></ul>
             <p class="notasks">no tasks yet</p>
             <p class="addedtasks"></p>
+            <div class="mainlist__clear">
+                <button class="button clear-button">clear task list</button>
+            </div>
         </div>
     </main>
 

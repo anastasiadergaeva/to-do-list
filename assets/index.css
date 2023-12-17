@@ -12,9 +12,19 @@ body {
 
 .main__heading,
 .tasklist__heading,
-.notasks {
+.notasks,
+.mainlist__clear {
     text-align: center;
     font-family: 'Roboto Slab', serif;
+}
+
+li {
+    list-style: none;
+    border: 1px solid rgba(139, 69, 19, 0.781);
+    padding: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
 }
 
 .main__form {
@@ -27,10 +37,18 @@ body {
     border: 2px solid saddlebrown;
     border-radius: 20px;
     margin-top: 2em;
+    padding-bottom: 1.5em;
 }
 
-.task-item,
-.checked {
+.tasklist {
+    padding-left: 40px;
+    padding-right: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.taskstyle.checked {
     color: #e5a06c;
     text-decoration: line-through;
 }
@@ -38,6 +56,17 @@ body {
 .taskinput {
     border-radius: 15px;
     border: 2px solid saddlebrown;
+}
+
+.taskstyle::before {
+    content: '';
+    position: absolute;
+    background-image: url(assets/checkbox/checkbox-unchecked.svg);
+    background-size: cover;
+}
+
+.taskstyle.checked::before {
+    background-image: url(assets/checkbox/checkbox-checked);
 }
 
 .button {
