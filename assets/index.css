@@ -61,12 +61,12 @@ li {
 .taskstyle::before {
     content: '';
     position: absolute;
-    background-image: url(assets/checkbox/checkbox-unchecked.svg);
+    background-image: url('assets/checkbox/checkbox-unchecked.svg');
     background-size: cover;
 }
 
 .taskstyle.checked::before {
-    background-image: url(assets/checkbox/checkbox-checked);
+    background-image: url('assets/checkbox/checkbox-checked.svg');
 }
 
 .button {
