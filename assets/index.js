@@ -7,6 +7,7 @@ const noTasks = document.querySelector('.notasks');
 function createTask() {
     const taskValue = taskInput.value;
     if (taskValue !== '') {
+        clearButton.disabled = false;
         noTasks.classList.add('nodisplay');
         const newTask = document.createElement('li');
         newTask.classList.add('font');
@@ -23,29 +24,30 @@ function createTask() {
         label.textContent = taskValue;
         newTask.appendChild(label);
         taskInput.value = '';
+
+        // Добавляем обработчик события для чекбокса
+        checkbox.addEventListener('click', function () {
+            newTask.classList.toggle('checked');
+            saveToLocalStorage();
+        });
     }
     saveToLocalStorage();
-}
-
-function checkTask(checkbox) {
-    if (checkbox.target.tagName === 'LI') {
-        checkbox.target.classList.toggle('checked');
-        saveToLocalStorage();
-    }
 }
 
 function clearTaskList() {
     taskList.innerHTML = '';
     noTasks.classList.remove('nodisplay');
-    clearButton.disabled = true;
+    clearButton.disabled = false;
     localStorage.clear();
 }
 
 function saveToLocalStorage() {
-    localStorage.setItem('tasklist'.taskList.innerHTML);
+    // Сохраняем HTML содержимое списка в локальное хранилище
+    localStorage.setItem('tasklist', taskList.innerHTML);
 }
 
 function showTaskList() {
+    // Восстанавливаем список из локального хранилища
     taskList.innerHTML = localStorage.getItem('tasklist');
     if (taskList.innerHTML !== '') {
         clearButton.disabled = false;
@@ -56,5 +58,4 @@ function showTaskList() {
 showTaskList();
 
 addButton.addEventListener('click', createTask);
-taskList.addEventListener('click', checkTask);
 clearButton.addEventListener('click', clearTaskList);
